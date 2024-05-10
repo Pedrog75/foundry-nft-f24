@@ -17,6 +17,7 @@ contract MoodNft is ERC721 {
   }
 
   mapping(uint256 => Mood) private s_tokenIdToMood;
+
   constructor(
     string memory sadSvgImageUri,
     string memory happySvgImageUri
@@ -66,7 +67,7 @@ contract MoodNft is ERC721 {
           bytes(
             abi.encodePacked(
               '{"name":"',name(),
-              '", "description":"An NFT that reflects the owner mood.", "attributes": [{"trait_type":"moodiness","value":100}], "image": "'
+              '", "description":"An NFT that reflects the owners mood.", "attributes": [{"trait_type":"moodiness","value":100}], "image": "'
               ,imageURI,'"}'
               )
             )
